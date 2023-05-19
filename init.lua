@@ -116,17 +116,24 @@ require('lazy').setup({
   --  end,
   --},
 
-  {
-    'lunarvim/colorschemes'
-  },
+--  {
+--    'lunarvim/colorschemes'
+--  },
+--
+--  {
+--    'Mofiqul/vscode.nvim',
+--    config = function()
+--      vim.cmd.colorscheme 'default'
+--    end,
+--  },
+--
 
   {
-    'Mofiqul/vscode.nvim',
+    'rose-pine/neovim', as = 'rose-pine',
     config = function()
-      vim.cmd.colorscheme 'default'
+      vim.cmd.colorscheme 'rose-pine'
     end,
   },
-
 
   {
     -- Set lualine as statusline
