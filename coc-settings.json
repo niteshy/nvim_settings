@@ -1,0 +1,13 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "py",
+    "python",
+    "yaml",
+    "json"
+  ],
+  "python.linting.flake8Enabled": true,
+  "python.venvPath": "${env:HOME}/.pyenv/versions",
+  "venv": "coc",
+  "python.formatting.provider": "black",
+  "python.formatting.blackPath": "~/.pyenv/versions/coc/bin/black",
+}
