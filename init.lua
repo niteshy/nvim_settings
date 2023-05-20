@@ -128,11 +128,21 @@ require('lazy').setup({
 --  },
 --
 
+--  {
+--    'rose-pine/neovim', as = 'rose-pine',
+--    config = function()
+--      vim.cmd.colorscheme 'rose-pine'
+--    end,
+--  },
+--
+
   {
-    'rose-pine/neovim', as = 'rose-pine',
-    config = function()
-      vim.cmd.colorscheme 'rose-pine'
+    "norcalli/nvim-colorizer.lua",
+    cmd = "ColorizerToggle",
+    config = function() 
+      require("colorizer").setup()
     end,
+
   },
 
   {
@@ -142,14 +152,14 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'vscode',
+        theme = 'auto',
         component_separators = '|',
         section_separators = '',
       },
     },
   },
 
-  { 'vim-airline/vim-airline-themes' }, 
+  -- { 'vim-airline/vim-airline-themes' }, 
 
   {
     -- Add indentation guides even on blank lines
@@ -354,8 +364,9 @@ require('nvim-treesitter.configs').setup {
   ensure_installed = { 'c', 'cpp', 'lua', 'python', 'tsx', 'typescript', 'vim' },
 
   -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
-  auto_install = false,
+  auto_install = true,
 
+  markid = { enable = true },
   highlight = { enable = true },
   indent = { enable = true, disable = { 'python' } },
   incremental_selection = {
