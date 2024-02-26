@@ -33,6 +33,8 @@ null_ls.setup({
 			end,
 		}),
 		null_ls.builtins.completion.spell,
+		null_ls.builtins.diagnostics.mypy,
+		null_ls.builtins.diagnostics.ruff,
 	},
 	-- configure format on save
 	on_attach = function(current_client, bufnr)

@@ -89,6 +89,13 @@ lspconfig["emmet_ls"].setup({
   filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
 })
 
+-- configure Python language server
+lspconfig["pyright"].setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "python" },
+})
+
 -- configure lua server (with special settings)
 lspconfig["lua_ls"].setup({
   capabilities = capabilities,
